@@ -2,6 +2,7 @@ package ru.v1ad54;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LogicTasksTest {
@@ -78,11 +79,14 @@ class LogicTasksTest {
         assertEquals("A", LogicTasks.getGrade(90));
         assertEquals("A", LogicTasks.getGrade(100));
 
-        // Исключение IllegalArgumentException при отрицательных баллах
-        assertThrows(IllegalArgumentException.class, () -> LogicTasks.getGrade(-1),
-                "Должно быть исключение IllegalArgumentException при отрицательных баллах");
-        // Исключение IllegalArgumentException при баллах больше 100
-        assertThrows(IllegalArgumentException.class, () -> LogicTasks.getGrade(101),
-                "Должно быть исключение IllegalArgumentException при баллах больше 100");
+//        // Исключение IllegalArgumentException при отрицательных баллах
+//        assertThrows(IllegalArgumentException.class, () -> LogicTasks.getGrade(-1),
+//                "Должно быть исключение IllegalArgumentException при отрицательных баллах");
+//        // Исключение IllegalArgumentException при баллах больше 100
+//        assertThrows(IllegalArgumentException.class, () -> LogicTasks.getGrade(101),
+//                "Должно быть исключение IllegalArgumentException при баллах больше 100");
+        // Если переданное число не входит в границы — вернуть строку Error.
+        assertEquals("Error", LogicTasks.getGrade(-1));
+        assertEquals("Error", LogicTasks.getGrade(101));
     }
 }

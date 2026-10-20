@@ -3,7 +3,7 @@ package ru.v1ad54;
 public class LogicTasks {
 
     /**
-     * Метод возвращает true, если число четное
+     * Метод возвращает true, если число четное и false — если нечётное.
      *
      * @param n - проверяемое число
      * @return - true, если число четное, иначе false
@@ -35,13 +35,15 @@ public class LogicTasks {
 
     /**
      * Метод преобразует баллы (0-100) в символы оценки (A, B, C, D, E)
+     * Если переданное число не входит в границы — вернуть строку Error.
      *
      * @param score - баллы от 0 до 100
      * @return - строковая оценка
      */
     public static String getGrade(int score) {
         if (score < 0 || score > 100) {
-            throw new IllegalArgumentException("Баллы должны быть в диапазоне от 0 до 100");
+//            throw new IllegalArgumentException("Баллы должны быть в диапазоне от 0 до 100");
+            return "Error";
         }
 
         if (score <= 20) {

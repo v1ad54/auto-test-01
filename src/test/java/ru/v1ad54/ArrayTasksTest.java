@@ -66,8 +66,8 @@ public class ArrayTasksTest {
     void removeSpecificNameTest() {
         // удаление существующего имени (одного и нескольких)
         assertEquals(
-                        Arrays.asList("Петр", "Анна"),
-                        ArrayTasks.removeSpecificName(Arrays.asList("Иван", "Петр", "Иван", "Анна"), "Иван")
+                Arrays.asList("Петр", "Анна"),
+                ArrayTasks.removeSpecificName(Arrays.asList("Иван", "Петр", "Иван", "Анна"), "Иван")
         );
 
         // имя для удаления отсутствует в списке
